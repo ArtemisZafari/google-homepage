@@ -68,7 +68,7 @@ max-width: 100%;
 #apps {
     height: 2px;
     width: 2px;
-    background-image: url(images/apps-normal.png);
+    background-image: url(/images/apps-normal.png);
     background-size: 32px 32px;
     padding: 15px;
     margin-right: 20px;
@@ -189,14 +189,14 @@ max-width: 100%;
     #apps {
         height: 2px;
         width: 2px;
-        background-image: url(images/apps-normal.png);
+        background-image: url(/images/apps-normal.png);
         background-size: 32px 32px;
         padding: 15px;
         margin-right: 20px;
     }
 
     #apps:hover {
-        background-image: url(images/apps-bold.png);
+        background-image: url(/images/apps-bold.png);
     }
 
     #about, #gmail, #images {
