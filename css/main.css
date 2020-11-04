@@ -51,16 +51,31 @@ max-width: 100%;
 #header {
     display: flex;
     height: 35px;
-    padding: 5px;
-    margin-right: 15px;
-    margin-top: 12px;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 12px;
 }
 
-#header a {
-    padding: 7px;
+#header-left {
+    display: none;
+}
+
+#header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#header-right a {
+    padding: 15px;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.87);
 }
@@ -71,19 +86,8 @@ max-width: 100%;
     background-image: url(../images/apps-normal.png);
     background-size: 32px 32px;
     padding: 15px;
-    margin-right: 20px;
-}
-
-#about, #gmail {
-    margin-right: 14px;
-}
-
-#images {
-    margin-right: 106px;
-}
-
-#store {
-    margin-right: 1434px;
+    margin-right: 28px;
+    margin-left: 15px;
 }
 
 #sign-in {
@@ -91,8 +95,7 @@ max-width: 100%;
     color: white;
     border: 1px solid #1a73e8;
     font-weight: bold;
-    padding: 7px 12px 7px 12px;
-    margin-right: 10px;
+    padding: 7px 10px 7px 10px;
     border-radius: 4px;
     text-align: center;
     white-space: nowrap;
@@ -116,6 +119,10 @@ max-width: 100%;
     text-align: center;
     margin: 30px 6px;
     padding: 0 16px;
+}
+
+#footer {
+    display: none;
 }
 
 /* Larger devices (laptops/desktops, 992px and up) */
@@ -172,18 +179,43 @@ max-width: 100%;
     #header {
         display: flex;
         height: 35px;
-        padding: 5px;
-        margin-right: 15px;
-        margin-top: 12px;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         font-size: 13px;
+        text-align: center;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-top: 12px;
     }
 
-    #header a {
-        padding: 7px;
+    #header-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding-left: 1%;
+    }
+
+    #header-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding-right: 1%;
+    }
+
+    #header-left a, #header-right a {
+        padding: 15px;
         text-decoration: none;
         color: rgba(0, 0, 0, 0.87);
+    }
+
+    #header-left a:hover, #header-right a:hover {
+        text-decoration: underline;
     }
 
     #apps {
@@ -192,19 +224,11 @@ max-width: 100%;
         background-image: url(../images/apps-normal.png);
         background-size: 32px 32px;
         padding: 15px;
-        margin-right: 20px;
+        margin-right: 28px;
     }
 
     #apps:hover {
         background-image: url(../images/apps-bold.png);
-    }
-
-    #about, #gmail, #images {
-        margin-right: 14px;
-    }
-
-    #store {
-        margin-right: 1434px;
     }
 
     #about:hover, #gmail:hover, #images:hover, #store:hover {
@@ -252,6 +276,51 @@ max-width: 100%;
         background-color: #f8f8f8;
         border: 1px solid #c6c6c6;
         color: #222;
+    }
+
+    #footer {
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        text-align: center;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #f2f2f2;
+        border-top-color: rgb(228, 228, 228);
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+
+    #footer-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding-left: 1%;
+    }
+
+    #footer-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding-right: 1%;
+    }
+
+    #footer-left a, #footer-right a {
+        padding: 12px;
+        text-decoration: none;
+        color: #5f6368;
+    }
+
+    #footer-left a:hover, #footer-right a:hover {
+        text-decoration: underline;
     }
 
 }
